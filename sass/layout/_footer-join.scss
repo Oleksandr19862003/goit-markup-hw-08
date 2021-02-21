@@ -1,0 +1,31 @@
+.footer-social {
+  margin-left: 70px;
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-weight: var(--bold-font-weight);
+    text-transform: uppercase;
+    color: var(--common-lite-color);
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+}
+.footer-social__link {
+  @include dimen(100%, 100%);
+  @include align(flex, center, center);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--common-lite-color);
+  transition: background-color 250ms var(--common-cubic-bezier);
+
+  &:hover {
+    background-color: var(--accent-color);
+  }
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}

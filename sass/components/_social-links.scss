@@ -1,0 +1,25 @@
+.social-list {
+  margin-top: 10px;
+  display: flex;
+}
+.social-list__item {
+  @include dimen(44px, 44px);
+
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+.social-list__link {
+  @include dimen(100%, 100%);
+  @include align(flex, center, center);
+  fill: var(--common-link);
+  border-radius: 50%;
+  transition: background-color 250ms var(--common-cubic-bezier),
+    fill 250ms var(--common-cubic-bezier);
+
+  &:hover,
+  &:focus {
+    fill: var(--common-lite-color);
+    background-color: var(--accent-color);
+  }
+}

@@ -1,0 +1,28 @@
+.section-what-we-do {
+  padding-bottom: 94px;
+}
+.what-we-do {
+  @include align(flex, center, center);
+
+  &__items {
+    margin-right: 30px;
+  }
+  &__img {
+    position: relative;
+  }
+  &__discr {
+    position: absolute;
+    bottom: 0;
+    @include dimen(100%, 70px);
+    content: "";
+    @include font(
+      var(--font-size),
+      var(--line-height-normal),
+      var(--letter-spacing)
+    );
+    @include align(flex, center, center);
+    text-transform: uppercase;
+    color: var(--common-background);
+    background: rgba(47, 48, 58, 0.8);
+  }
+}
